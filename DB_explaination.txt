@@ -1,0 +1,18 @@
+Các thực thể chính:
+    - Company
+    - Department
+    - Employee
+    - Product
+    - Invoice
+
+Các mối quan hệ:
+    - Company-Product: 1-n (1 công ty bán nhiều sản phẩm, 1 sản phẩm được bán bởi 1 công ty)
+    - Compayny-Department: 1-n (1 công ty có nhiều phòng ban, 1 phòng ban chỉ thuộc 1 công ty)
+    - Company-Employee: 1-n (1 công ty có nhiều nhân viên, 1 nhân viên chỉ thuộc 1 công ty)
+    - Department-Employee: 1-n (1 phòng ban có nhiều nhân viên, 1 nhân viên chỉ thuộc 1 phòng ban) 
+    - Role-Employee: 1-n (1 nhân viên có 1 quyền, 1 quyền có bởi nhiều nhân viên)
+    - Merchant_employee-Invoice: 1-n (1 nhân viên mua hàng có thể mua nhiều hóa đơn, 1 hóa đơn chỉ thuộc 1 nhân viên) 
+    - Invoice-Product: n-n (1 hóa đơn có nhiều sản phẩm, 1 sản phẩm có thể thuộc nhiều hóa đơn)
+    - Audit_Employee-Company: n-n (1 nhân viên kiểm toán có thể xem payment của nhiều công ty khác và 1 công ty có thể xem payment bởi nhiều nhân viên kiểm toán)
+
+Hai thuộc tính ApproverID là id của nhân viên đề nghị mua đơn hàng (bảng Invoice) và id của nhân viên giao nhiệm vụ cho nhân viên khác xem thanh toán của công ty nào đó (bảng Can_View_Payment)
